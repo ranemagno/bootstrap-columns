@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <title>Hello, world!</title>
+
+    <style>
+      .top {
+        background-color: gray;
+        border: 1px solid black;
+        height: 25vh;
+      }
+      .hide {
+        background-color: white;
+        border: none;
+      }
+      /* css animations */
+      .card-a {
+        overflow: hidden;
+        transition-duration: 2s;
+        transition-property: transform;
+      }
+      .spin-time {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+        cursor: pointer;
+      }
+      .top-left {
+        background-color: gray;
+      }
+      .change-col {
+        background-color: purple;
+      }
+      .change-me {
+        background-color: gray;
+      }
+      .bot {
+        height: 40vh;
+        background-color: gray;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+          <div class="top top-left col-sm" id="topL"></div>
+        <div class="top col-sm change-me" id="top2"></div>
+        <div class="top col-sm"></div>
+        <div class="top col-sm"></div>
+        <div class="top col-sm"></div>
+        <div class="top col-sm"></div>
+      </div>
+      <div class="row">
+        <div class="top  col-4"></div>
+        <div class="top hide col-4"></div>
+        <div class="top col-4"></div>
+      </div>
+
+
+
+      <div class="row">
+        <div class="col-sm-3">
+          <div class="card card-a">
+            <img src="https://via.placeholder.com/300" alt="placeholder">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a class="btn btn-primary " id="btnA">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="https://via.placeholder.com/300" alt="placeholder">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="https://via.placeholder.com/300" alt="placeholder">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-3">
+          <div class="card">
+            <img src="https://via.placeholder.com/300" alt="placeholder">
+            <div class="card-body">
+              <h5 class="card-title">Special title treatment</h5>
+              <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+              <a class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- end of container -->
+    </div>
+
+
+  <script>
+    $('document').ready(function (){
+      $('#btnA').click(function(){
+        // css method jquery allows us to change css properties and values
+        $('.card-a').addClass('spin-time');
+      });
+
+      // changes color when clicked
+      $('#topL').click(function(){
+        $('.top-left').addClass('change-col');
+      });
+      // same effect as above code but another easier way to change properties
+      $('#top2').click(function(){
+        $('.change-me').css('background-color: purple');
+      });
+
+    });
+  </script>
+
+</html>
